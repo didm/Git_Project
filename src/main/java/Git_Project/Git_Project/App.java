@@ -13,15 +13,15 @@ public class App
 			for(int j=0;j<20;j++) {
 				JFrame fenetre = new JFrame();
 				
-				 String chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+				 String chars = "abcdefghijklmnopqrstuvwxyz";
 				    String pass = "";
 				    for(int x=0;x<5;x++)
 				    {
-				       int w = (int)Math.floor(Math.random() * 36);
+				       int w = (int)Math.floor(Math.random() * 26);
 				       pass += chars.charAt(w);
 				    }
 				    
-			    fenetre.setSize(200, 200);
+			    fenetre.setSize((int)(Math.random() * 1000), (int)(Math.random() * 1000));
 			    fenetre.setTitle(pass);
 			    fenetre.setLocation((int)(Math.random() * 1600), (int)(Math.random() * 1000)); 
 			    
