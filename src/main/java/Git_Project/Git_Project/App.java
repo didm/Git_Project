@@ -13,11 +13,11 @@ public class App
 			for(int j=0;j<20;j++) {
 				JFrame fenetre = new JFrame();
 				
-				 String chars = "abcdefghijklmnopqrstuvwxyz";
+				 String chars = "abcdefghijklmnopqrstuvwxyz0123456789";
 				    String pass = "";
 				    for(int x=0;x<5;x++)
 				    {
-				       int w = (int)Math.floor(Math.random() * 26);
+				       int w = (int)Math.floor(Math.random() * 36);
 				       pass += chars.charAt(w);
 				    }
 				    
