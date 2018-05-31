@@ -1,42 +1,29 @@
 package Git_Project.Git_Project;
 
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import java.util.Scanner;
 
 public class App 
 {
     public static void main( String[] args )
     {
-    	for(int i=0;i<20;i++){
-			for(int j=0;j<20;j++) {
-				JFrame fenetre = new JFrame();
-				
-				 String chars = "abcdefghijklmnopqrstuvwxyz";
-				    String pass = "";
-				    for(int x=0;x<5;x++)
-				    {
-				       int w = (int)Math.floor(Math.random() * 26);
-				       pass += chars.charAt(w);
-				    }
-				    
-			    fenetre.setSize((int)(Math.random() * 1000), (int)(Math.random() * 1000));
-			    fenetre.setTitle(pass);
-			    fenetre.setLocation((int)(Math.random() * 1600), (int)(Math.random() * 1000)); 
-			    
-			   
-			    fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			    JPanel pan = (JPanel)fenetre.getContentPane();
-			    
-		        JLabel label = new JLabel();
-		        label.setIcon(new ImageIcon("ressources/imageMystere.jpg"));
-		        pan.add(label);
-		        
-			    
-			    fenetre.setContentPane(pan);               
-			    fenetre.setVisible(true);
-			}
-		}
+    	Scanner sc = new Scanner(System.in);
+    	int choix = 0;
+    	
+    	do {
+    	System.out.println("Que voulez-vous voir ?");
+    	System.out.println("1- Groot");
+    	System.out.println("2- Une surprise");
+    	
+    	choix = sc.nextInt();
+
+    	}while(choix != 1 && choix != 2);
+    	
+	    	if (choix == 1) {
+	    		JeSAppelleGroot groot = new JeSAppelleGroot();
+	    		groot.commentJeMAppelle();
+	    	}else if (choix == 2) {
+	    		ImageMystere img = new ImageMystere();
+	    		img.Surprise();
+	    	}
     }
 }
